@@ -1,0 +1,346 @@
+@import "bootstrap/bootstrap";
+@import "fonts/albert";
+
+@primary-color: #00929E;
+@secondary-color: lighten(@primary-color, 5%);
+
+@footer-height: 50px;
+
+@link-color: @secondary-color;
+
+@btn-primary-bg: @primary-color;
+@btn-default-bg: #999;
+@btn-default-color: #fff;
+@btn-font-weight: 300;
+
+@navbar-inverse-bg: @gray-dark;
+
+@font-family-sans-serif: "Albert", Helvetica, Arial, sans-serif;
+@font-size-base:   13px;
+@font-size-xlarge: ceil((@font-size-base * 3.57)); // ~50
+
+@headings-color: @primary-color;
+@headings-font-family: "Albert Thin", @font-family-sans-serif;
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: @footer-height;
+}
+
+h1, .h1,
+.xlarge {
+    small {
+        &:extend(small);
+        display: block;
+        font-size: ceil((@font-size-xlarge * 0.5));
+    }
+}
+
+.xlarge {
+    &:extend(h1);
+    font-size: @font-size-xlarge;
+}
+
+h3, .h3 {
+    small {
+        display: block;
+    }
+}
+
+hr {
+  border-top: 1px dotted @gray-light;
+  height: 1px;
+}
+
+.container {
+    width: 970px !important;
+}
+
+body, label, .checkbox label {
+	font-weight: 300;
+}
+
+.logo-s {
+    background-image: url(../images/logo-s.png);
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    vertical-align: middle;
+}
+
+.btn {
+    &:extend(.text-uppercase);
+    border: none;
+    border-radius: 0;
+    font-family: "Albert Bold", @font-family-sans-serif;
+}
+
+.dotted-line {
+    border-right: 1px dotted @gray-light;
+    min-height: 250px;
+    margin-bottom: 20px;
+}
+
+.dotted-line-bottom {
+    border-bottom: 1px dotted @gray-light;
+}
+
+.text-green {
+    color: @primary-color;
+}
+
+.environments {
+    .make-row();
+    &:extend(.dotted-line-bottom);
+    
+    > .thumbnail {
+        &:extend(.thumbnail-plain);
+        .make-sm-column(3);
+    }
+
+    .caption {
+        &:extend(.text-center);
+        margin-top: 20px;
+
+        h3 {
+            font-size: @font-size-h2;
+            font-weight: bold;
+        }
+    }
+}
+
+.giving-back {
+    &:extend(.row);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.thumbnails {
+    &:extend(.row);
+    border-bottom: 1px dotted @gray-light;
+}
+
+.thumbnail-plain {
+    &:extend(.thumpnail);
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    
+
+    h3 {
+        margin: 10px 0 5px;
+
+        small {
+            &:extend(.text-uppercase);
+        }
+    }
+
+    .caption {
+        padding: 0;
+    }
+}
+
+.panel-heading a:after {
+    /* symbol for "opening" panels */
+    font-family: FontAwesome;  /* essential for enabling glyphicon */
+    content: "\f0d7";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: @primary-color;         /* adjust as needed */
+}
+.panel-heading a.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\f0da";    /* adjust as needed, taken from bootstrap.css */
+}
+
+.panel-plain {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+    & > .panel-heading {
+        &:extend(.dotted-line-bottom);
+        color: @primary-color;
+        padding-left: 0;
+
+        > .panel-title {
+             font-size: @font-size-h3;
+
+            > a {
+                text-decoration: none;
+            }
+        }
+
+        + .panel-collapse > .panel-body {
+            border: none;
+        }
+        
+        .badge {
+            color: @primary-color;
+        }
+    }
+    
+    & > .panel-footer {
+        + .panel-collapse > .panel-body {
+            padding-left: 0; 
+        }
+    }
+}
+
+.no-margin-top {
+    margin-top: 0;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+.no-padding-left {
+    padding-left: 0;
+}
+
+.navbar {
+    border: none;
+    border-radius: 0;
+    min-height: 40px;
+}
+
+/* Always apply the floated nav */
+.navbar-nav {
+  float: left;
+  margin: 0;
+}
+.navbar-nav > li {
+  float: left;
+}
+.navbar-nav > li > a {
+  padding: 15px;
+}
+
+/* Redeclare since we override the float above */
+.navbar-nav.navbar-right {
+  float: right;
+}
+
+.navbar-delivery {
+    &:extend(.navbar-brand);
+    color: #fff;
+    font-family: "Albert Bold", @font-family-sans-serif;
+    padding-left: 0;
+    text-transform: uppercase;
+
+    &:hover {
+        color: @gray-light;
+        text-decoration: none;
+    }
+}
+
+.main-nav {
+    > li {
+        padding-right: 20px;
+
+        > a {
+            border-top: 5px solid #ccc;
+            color: @primary-color;
+            font-family: "Albert Bold", @font-family-sans-serif;
+            padding-left: 0;
+            min-width: 168px;
+            text-transform: uppercase;
+            transition: all 1s;
+        } 
+    }
+
+    > li.active > a,
+    > li.active > a:hover,
+    > li > a:hover {
+        border-top-color: @primary-color;
+        background: transparent;
+    }
+
+    > li.active > a {
+        background-color: @primary-color;
+        border-top-color: @primary-color;
+        color: #fff;
+        text-align: center;
+    }
+}
+
+.content-push-top {
+    .make-row();
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.social-nav {
+    &:extend(.main-nav);
+    background-color: @secondary-color;
+
+    .social-text {
+        &:extend(.navbar-text);
+        line-height: .75em;
+        width: 45px;
+    }
+
+    > li {
+            color: #fff;
+        
+        > a {
+            color: #fff;
+            padding: 10px;
+
+            &:hover {
+                background-color: transparent;
+                color: @primary-color;
+            }
+
+            > .fa-2 {
+                font-size: 2em;
+            }
+        }
+    }
+}
+
+.footer-nav {
+    &:extend(.main-nav);
+    > li {
+        > a {
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            width: 120px;
+
+            &:hover {
+                color: @secondary-color;
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.footer {
+    font-family: "Albert Bold", @font-family-sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: @footer-height;
+    background-color: @primary-color;
+
+    .copyright {
+        &:extend(.navbar-right,.navbar-text);
+        color: #fff;
+    }
+}
