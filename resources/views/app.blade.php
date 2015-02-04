@@ -47,6 +47,7 @@
 			</div>
 		</div>
 	</div>
+	@include('partials.tank')
 	<footer class="footer">
     	<div class="container">
         	<div class="navbar">

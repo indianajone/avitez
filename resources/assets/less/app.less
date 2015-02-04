@@ -77,6 +77,33 @@ body, label, .checkbox label {
     vertical-align: middle;
 }
 
+.fuel-tank {
+    font-family: "Albert Bold", @font-family-sans-serif;
+    position: absolute;
+    width: 75px;
+    top: 50%;
+    text-align: center;
+
+    p:first-child {
+        background-color: @gray;
+        color: #fff;
+        padding: 12.5px;
+
+        span {
+            width: 100%;
+        }
+
+        img {
+            &:extend(.block-center);
+            &:extend(.img-responsive);
+        }
+    }
+    p + p {
+        color: @gray;
+        font-size: @font-size-small;
+    }
+}
+
 .btn {
     &:extend(.text-uppercase);
     border: none;

@@ -9,7 +9,7 @@
     <div class="col-xs-8">
         <div class="row">
             <h1>FAQs</h1>
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+            <div class="panel-group" id="faqs" role="tablist" aria-multiselectable="false">
                 @foreach ($faqs as $faq)
 
                     @include('pages.partials.faq', [

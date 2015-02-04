@@ -19,7 +19,9 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home');
+		$isHome = true;
+
+		return view('home', compact('isHome'));
 	}
 
 }

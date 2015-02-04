@@ -925,7 +925,8 @@ img {
 .thumbnail > img,
 .thumbnail a > img,
 .carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
+.carousel-inner > .item > a > img,
+.fuel-tank p:first-child img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -6327,6 +6328,25 @@ label,
   background-repeat: no-repeat;
   background-size: 80%;
   vertical-align: middle;
+}
+.fuel-tank {
+  font-family: "Albert Bold", "Albert", Helvetica, Arial, sans-serif;
+  position: absolute;
+  width: 75px;
+  top: 50%;
+  text-align: center;
+}
+.fuel-tank p:first-child {
+  background-color: #555555;
+  color: #fff;
+  padding: 12.5px;
+}
+.fuel-tank p:first-child span {
+  width: 100%;
+}
+.fuel-tank p + p {
+  color: #555555;
+  font-size: 12px;
 }
 .btn {
   border: none;
