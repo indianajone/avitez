@@ -3,18 +3,18 @@
 @section('content')
 
 <div class="row">
-	<div class="col-xs-4">
+	<div class="col-md-4">
 		<img src="images/home/bottle.png" alt="Avitez's Bottle" />
 	</div>
-	<div class="col-xs-8">
+	<div class="col-md-8">
 		<div class="row">
-			<div class="col-xs-12">
+			<div class="col-md-12">
 				<h1 class="xlarge">Asia's first all natural water bottle made100% from Plants</h1>
 				<p>An evolutionary product for the visionary mindset. Created to meet the increasingly sophisticated demands of an ever-changing world.</p>
 			</div>
 		</div>
 		<div class="thumbnails">
-			<div class="col-xs-4 dotted-line">
+			<div class="col-md-4 dotted-line">
 				<div class="thumbnail thumbnail-plain">
 					<img src="images/home/temp-1.jpg" alt="" />
 					<div class="caption">
@@ -23,7 +23,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-4 dotted-line">
+			<div class="col-md-4 dotted-line">
 				<div class="thumbnail thumbnail-plain">
 					<img src="images/home/temp-2.jpg" alt="" />
 					<div class="caption">
@@ -32,7 +32,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-4">
+			<div class="col-md-4">
 				<div class="thumbnail thumbnail-plain">
 					<img src="images/home/temp-3.jpg" alt="" />
 					<div class="caption">
@@ -43,7 +43,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-12">
+			<div class="col-md-12">
 				<h5><i class="logo-s"></i>Avitez and Centara Hotels &amp; Resorts are giving back... <a href="#">read more</a></h5>
 			</div>
 		</div>

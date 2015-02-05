@@ -37,8 +37,8 @@ class FaqsTableSeeder extends Seeder {
     protected $answers =[
         '<p>Avitez bottles are made from field corn or other sugar based plants.  These plants are fermented to extract natural sugars and starch.  Then follows the process of separation and polymerization to develop a resin like substance called PLA or polylactic acid.</p>
             <div class="row">
-            <div class="col-xs-6"><img class="img-responsive" src="images/faqs/faq-1-pic-1.jpg" alt="" /></div>
-            <div class="col-xs-6">
+            <div class="col-md-6"><img class="img-responsive" src="images/faqs/faq-1-pic-1.jpg" alt="" /></div>
+            <div class="col-md-6">
                 <p>The manufacturing process of PLA bottles does not undergo any chemical treatment making it completely safe for storing water. We use the world renown Ingeo PLA resin manufactured by Natureworks LLC.</p>
                 <p>Our footprint from production through to disposal provides the most environmentally friendly solution for bottled water available today.</p>
             </div> 
@@ -55,20 +55,20 @@ class FaqsTableSeeder extends Seeder {
 		<p>Glass is energy intensive in transportation and cleansing.  Even if no energy was required to transport and clean, glass bottles would have to be recycled more than 20 times to compete with PLA. Also, glass isn’t portable and poses a risk to it’s consumers should it break.</p>',
 
 		'<div class="row">
-			<div class="col-xs-6">The mineral content of Avitez water varies as the water comes from a natural source. The approximate mineral content is shown below.</div>
-			<div class="col-xs-6">
-			    <div class="col-xs-6">Calcium</div>
-			    <div class="col-xs-6 text-right">0.43 mg/L</div>
-			    <div class="col-xs-6">tt</div>
-			    <div class="col-xs-6 text-right">0.13 mg/L</div>
-			    <div class="col-xs-6">Potassium</div>
-			    <div class="col-xs-6 text-right">0.90 mg/L</div>
-			    <div class="col-xs-6">Sodium</div>
-			    <div class="col-xs-6 text-right">1.02 mg/L</div>
-			    <div class="col-xs-6">Zinc </div>
-			    <div class="col-xs-6 text-right">0.02 mg/L</div>
-			    <div class="col-xs-6">Bicarbonate</div>
-			    <div class="col-xs-6 text-right">5 mg/L</div>
+			<div class="col-md-6">The mineral content of Avitez water varies as the water comes from a natural source. The approximate mineral content is shown below.</div>
+			<div class="col-md-6">
+			    <div class="col-md-6">Calcium</div>
+			    <div class="col-md-6 text-right">0.43 mg/L</div>
+			    <div class="col-md-6">tt</div>
+			    <div class="col-md-6 text-right">0.13 mg/L</div>
+			    <div class="col-md-6">Potassium</div>
+			    <div class="col-md-6 text-right">0.90 mg/L</div>
+			    <div class="col-md-6">Sodium</div>
+			    <div class="col-md-6 text-right">1.02 mg/L</div>
+			    <div class="col-md-6">Zinc </div>
+			    <div class="col-md-6 text-right">0.02 mg/L</div>
+			    <div class="col-md-6">Bicarbonate</div>
+			    <div class="col-md-6 text-right">5 mg/L</div>
 			</div>
 		</div>',
 
@@ -78,8 +78,8 @@ class FaqsTableSeeder extends Seeder {
 
 		'<p>Avitez bottles use NatureWorks Ingeo biopolymer.  This biopolymer is a significant step toward a better future.  Ingeo is made 100% from plants, not oil.  Production of these bottles emits 60% less greenhouse gases and uses 50% less non-renewable energy than traditional plastics.</p>',
 
-		'<div class="col-xs-6"><img class="img-responsive" src="images/faqs/faq-7-pic-1.jpg" alt="" /></div>
-		<div class="col-xs-6">The production of Ingeo PLA uses around half the amount of non-renewable energy than PET (Polyethylene terephthalate). PET is the oil based plastic used in traditional water bottles.</div>',
+		'<div class="col-md-6"><img class="img-responsive" src="images/faqs/faq-7-pic-1.jpg" alt="" /></div>
+		<div class="col-md-6">The production of Ingeo PLA uses around half the amount of non-renewable energy than PET (Polyethylene terephthalate). PET is the oil based plastic used in traditional water bottles.</div>',
 
 		'<p>Glass production is considerably less environmentally friendly than the production of plant-based bottles.  Glass production emits around 7.5 times more greenhouse gases and over 3 times more air pollution than PLA.</p>
 		<p>It is estimated that glass bottles would have to be re-used over 20 times before they can begin to compete with PLA bottles.  And this is without taking into account the energy intensive transport required to move around the heavy glass bottles.</p>

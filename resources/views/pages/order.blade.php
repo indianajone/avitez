@@ -3,8 +3,8 @@
 @section('content')
 
 <div class="content-push-top">
-    <div class="col-xs-1"></div>
-    <div class="col-xs-11">
+    <div class="col-md-1"></div>
+    <div class="col-md-11">
         <h1>
             Online Ordering
         </h1>

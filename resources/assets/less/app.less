@@ -22,17 +22,8 @@
 @headings-color: @primary-color;
 @headings-font-family: "Albert Thin", @font-family-sans-serif;
 
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: @footer-height;
-}
+@import "avitez/sticky-footer";
+@import "avitez/nav-social";
 
 h1, .h1,
 .xlarge {
@@ -59,12 +50,29 @@ hr {
   height: 1px;
 }
 
-.container {
-    width: 970px !important;
-}
-
 body, label, .checkbox label {
 	font-weight: 300;
+}
+
+.container {
+    max-width: 970px;
+}
+
+.brand {
+    .make-md-column(2);
+    .visible-md-block;
+    .visible-lg-block;
+    img {
+        .center-block();
+    }
+}
+
+.content {
+    .make-md-column(10);
+    img{
+        .center-block();
+        .img-responsive();
+    }
 }
 
 .logo-s {
@@ -78,6 +86,7 @@ body, label, .checkbox label {
 }
 
 .fuel-tank {
+    &:extend(.visible-md-block, .visible-lg-block);
     font-family: "Albert Bold", @font-family-sans-serif;
     position: absolute;
     width: 75px;
@@ -94,8 +103,8 @@ body, label, .checkbox label {
         }
 
         img {
-            &:extend(.block-center);
-            &:extend(.img-responsive);
+            .center-block();
+            .img-responsive();
         }
     }
     p + p {
@@ -111,10 +120,8 @@ body, label, .checkbox label {
     font-family: "Albert Bold", @font-family-sans-serif;
 }
 
-.dotted-line {
+.dotted-line-right {
     border-right: 1px dotted @gray-light;
-    min-height: 250px;
-    margin-bottom: 20px;
 }
 
 .dotted-line-bottom {
@@ -146,13 +153,13 @@ body, label, .checkbox label {
 }
 
 .giving-back {
-    &:extend(.row);
+    .make-row();
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .thumbnails {
-    &:extend(.row);
+    .make-row();
     border-bottom: 1px dotted @gray-light;
 }
 
@@ -163,7 +170,6 @@ body, label, .checkbox label {
     border-radius: 0;
     padding: 0;
     
-
     h3 {
         margin: 10px 0 5px;
 
@@ -175,18 +181,6 @@ body, label, .checkbox label {
     .caption {
         padding: 0;
     }
-}
-
-.panel-heading a:after {
-    /* symbol for "opening" panels */
-    font-family: FontAwesome;  /* essential for enabling glyphicon */
-    content: "\f0d7";    /* adjust as needed, taken from bootstrap.css */
-    float: right;        /* adjust as needed */
-    color: @primary-color;         /* adjust as needed */
-}
-.panel-heading a.collapsed:after {
-    /* symbol for "collapsed" panels */
-    content: "\f0da";    /* adjust as needed, taken from bootstrap.css */
 }
 
 .panel-plain {
@@ -205,14 +199,21 @@ body, label, .checkbox label {
             > a {
                 text-decoration: none;
             }
+
+            a:after {
+                font-family: FontAwesome;   /* essential for enabling glyphicon */
+                content: "\f0d7";           /* adjust as needed, taken from bootstrap.css */
+                float: right;               /* adjust as needed */
+                color: @primary-color;      /* adjust as needed */
+            }
+
+            a.collapsed:after {
+                content: "\f0da";           /* adjust as needed, taken from bootstrap.css */
+            }
         }
 
         + .panel-collapse > .panel-body {
             border: none;
-        }
-        
-        .badge {
-            color: @primary-color;
         }
     }
     
@@ -241,25 +242,8 @@ body, label, .checkbox label {
     min-height: 40px;
 }
 
-/* Always apply the floated nav */
-.navbar-nav {
-  float: left;
-  margin: 0;
-}
-.navbar-nav > li {
-  float: left;
-}
-.navbar-nav > li > a {
-  padding: 15px;
-}
-
-/* Redeclare since we override the float above */
-.navbar-nav.navbar-right {
-  float: right;
-}
-
 .navbar-delivery {
-    &:extend(.navbar-brand);
+    &:extend(.navbar-brand, .visible-md, .visible-lg);
     color: #fff;
     font-family: "Albert Bold", @font-family-sans-serif;
     padding-left: 0;
@@ -268,6 +252,34 @@ body, label, .checkbox label {
     &:hover {
         color: @gray-light;
         text-decoration: none;
+    }
+}
+
+.navbar-logo {
+    &:extend(.navbar-brand);
+    .visible-xs();
+    padding: 12px 15px;
+    img {
+        .img-responsive();
+        max-width: 50%;
+    }
+}
+
+@media (max-width: @screen-sm-min) {
+    .navbar-collapse {
+        background-color: @gray-dark;
+        .main-nav {
+            li {
+                padding-right: 0;
+                a {
+                    border: none;
+                    padding-left: 20px;
+                }
+                a:hover {
+                    background-color: @gray;
+                }
+            }
+        }
     }
 }
 
@@ -280,10 +292,13 @@ body, label, .checkbox label {
             color: @primary-color;
             font-family: "Albert Bold", @font-family-sans-serif;
             padding-left: 0;
-            min-width: 168px;
+            min-width: 166px;
             text-transform: uppercase;
             transition: all 1s;
         } 
+    }
+    >li:last-child {
+        padding-right: 0;
     }
 
     > li.active > a,
@@ -303,7 +318,9 @@ body, label, .checkbox label {
 
 .content-push-top {
     .make-row();
-    margin-top: 80px;
+    @media (min-width: @screen-md-min) {
+        margin-top: 80px;
+    }
     margin-bottom: 20px;
 }
 
@@ -311,43 +328,17 @@ body, label, .checkbox label {
     border-radius: 0;
 }
 
-.social-nav {
-    &:extend(.main-nav);
-    background-color: @secondary-color;
-
-    .social-text {
-        &:extend(.navbar-text);
-        line-height: .75em;
-        width: 45px;
-    }
-
-    > li {
-            color: #fff;
-        
-        > a {
-            color: #fff;
-            padding: 10px;
-
-            &:hover {
-                background-color: transparent;
-                color: @primary-color;
-            }
-
-            > .fa-2 {
-                font-size: 2em;
-            }
-        }
-    }
-}
-
 .footer-nav {
     &:extend(.main-nav);
+    color: #fff;
     > li {
         > a {
             color: #fff;
             text-align: center;
             text-transform: uppercase;
-            width: 120px;
+            @media (min-width: @screen-sm-min) {
+                width: 120px;
+            }
 
             &:hover {
                 color: @secondary-color;
@@ -359,15 +350,16 @@ body, label, .checkbox label {
 
 .footer {
     font-family: "Albert Bold", @font-family-sans-serif;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: @footer-height;
     background-color: @primary-color;
 
+    .container {
+        .navbar {
+            margin-bottom: 0;
+        }
+    }
+    
     .copyright {
-        &:extend(.navbar-right,.navbar-text);
+        &:extend(.navbar-right, .navbar-text, .text-center);
         color: #fff;
     }
 }

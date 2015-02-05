@@ -3,8 +3,8 @@
 @section('content')
 
 <div class="content-push-top">
-    <div class="col-xs-1"></div>
-    <div class="col-xs-11">
+    <div class="col-md-1"></div>
+    <div class="col-md-11">
         <h1>
             Our Environment
             <small>Through Avitez bottle sales, our customers have saved…</small>
@@ -45,10 +45,10 @@
         </div>
        
         <div class="giving-back">
-            <div class="col-xs-3">
+            <div class="col-md-3">
                 <img src="images/our-environment/avitez-cantara-logo.png" alt="Saved 34,567 of tree" />
             </div>
-            <div class="col-xs-9">
+            <div class="col-md-9">
                 <h4>Avitez and Centara Hotels &amp; Resorts are giving back</h4>
                 <p>Centara Hotels &amp; Resorts, a leading hotel chain, will be serving Avitez water across all bars and restaurants in Thailand. Keeping in line with Avitez eco-friendly initiatives and messaging. Centara Group and Avitez have pledged to donate 5.50thb for every Avitez bottle sold for natural conservation programs in Thailand.</p>
             </div>

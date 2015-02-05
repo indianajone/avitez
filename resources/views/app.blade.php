@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>AVITEZ 100% NATURAL INSIDE &amp; OUT.</title>
 
 	<link href="/css/all.css" rel="stylesheet">
@@ -19,7 +19,16 @@
 	<nav class="navbar navbar-inverse no-margin-bottom">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-delivery" href="#">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+       				<span class="sr-only">Toggle navigation</span>
+       				<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+      			</button>
+                <a class="navbar-logo" href="{{route('home')}}">
+                    <img src="images/logo-s.png" alt="Avitez"/>
+                </a>
+				<a class="navbar-delivery" href="{{route('order_path')}}">
 					<i class="fa fa-truck"></i>
 					<small>Available for</small> Home Delivery
 				</a>
@@ -28,21 +37,23 @@
 	</nav>
 	<nav class="navbar">
 		<div class="container">
-			<ul class="nav navbar-nav main-nav">
-				<li>{!! link_to_route('home', 'Home') !!}</li>
-				<li>{!! link_to_route('bottles_path', 'Our Bottles') !!}</li>
-				<li>{!! link_to_route('water_path', 'Our Water') !!}</li>
-				<li>{!! link_to_route('env_path', 'Our Environment') !!}</li>
-				<li>{!! link_to_route('order_path', 'Online Ordering') !!}</li>
-			</ul>
+    		<div class="collapse navbar-collapse" id="main-nav">
+    			<ul class="nav navbar-nav main-nav">
+    				<li>{!! link_to_route('home', 'Home') !!}</li>
+    				<li>{!! link_to_route('bottles_path', 'Our Bottles') !!}</li>
+    				<li>{!! link_to_route('water_path', 'Our Water') !!}</li>
+    				<li>{!! link_to_route('env_path', 'Our Environment') !!}</li>
+    				<li>{!! link_to_route('order_path', 'Online Ordering') !!}</li>
+    			</ul>
+    		</div>
 		</div>
 	</nav>
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-2">
+			<div class="brand">
 				<img src="images/logo.png" alt="Avitez"/>
 			</div>
-			<div class="col-xs-10">
+			<div class="content">
 				@yield('content')
 			</div>
 		</div>
