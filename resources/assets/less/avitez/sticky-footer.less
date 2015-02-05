@@ -1,0 +1,23 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    @media (min-width: @screen-sm-min) {
+        margin-bottom: @footer-height;
+    }   
+}
+
+.footer {
+    @media (min-width: @screen-sm-min) {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: @footer-height;
+    }
+}

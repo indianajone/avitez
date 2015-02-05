@@ -1,0 +1,34 @@
+.social-nav {
+    &:extend(.main-nav);
+    background-color: @secondary-color;
+    text-align: center;
+
+    li, a {
+         color: #fff;
+    }
+
+    li {
+        display: inline-block;
+
+        a {
+            padding: 10px;
+
+            &:hover {
+                background-color: transparent;
+                color: @primary-color;
+            }
+
+            > .fa-2 {
+                font-size: 2em;
+            }
+        }
+
+        .social-text {
+            &:extend(.navbar-text, .hidden-xs);
+            line-height: .75em;
+            @media (min-width: @screen-sm-min) {
+                width: 45px;
+            }
+        }
+    }
+}
