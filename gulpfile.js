@@ -20,6 +20,8 @@ elixir(function(mix) {
             "css/vendor.css",
             "css/app.css"
         ])
-        .copy('bower_components/font-awesome/fonts', 'public/fonts')
-        .copy('resources/assets/fonts', 'public/fonts');
+        .scripts([
+            "vendor.js",
+            "bootstrap.min.js"
+        ], "public/js", "public/js/main.js");
 });

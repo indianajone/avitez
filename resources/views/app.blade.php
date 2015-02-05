@@ -4,10 +4,9 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Avitez is Asia’s first mineral water in a bottle that is made entirely from plants, it is organic and eco-friendly - 100% natural inside and out. Made solely from nature, Avitez is both environmentally sustainable and good for your health.">
 	<title>AVITEZ 100% NATURAL INSIDE &amp; OUT.</title>
-
 	<link href="/css/all.css" rel="stylesheet">
-
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -64,7 +63,7 @@
         	<div class="navbar">
         		<ul class="nav navbar-nav social-nav">
         			<li> <p class="social-text">Social Network</p></li>
-        			<li><a href="#"><i class="fa fa-facebook-square fa-2"></i></a></li>
+        			<li><a href="//facebook.com/pages/Avitez/393668787370225"><i class="fa fa-facebook-square fa-2"></i></a></li>
         			<li><a href="#"><i class="fa fa-twitter fa-2"></i></a></li>
         		</ul>
         		<ul class="nav navbar-nav footer-nav">
@@ -77,7 +76,6 @@
       	</div>
     </footer>
 	<!-- Scripts -->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
