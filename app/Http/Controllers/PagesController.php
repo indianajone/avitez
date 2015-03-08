@@ -1,8 +1,7 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests;
+use App\Faq;
 use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
 
 class PagesController extends Controller {
@@ -22,20 +21,15 @@ class PagesController extends Controller {
         return view('pages.environment');
     }
 
-    public function order()
-    {
-        return view('pages.order');
-    }
-
     public function story()
     {
         return view('pages.story');
     }
 
-    public function faq()
+    public function faq(Faq $faq)
     {
-        $faqs = \App\Faq::all();
-
+        $faqs = $faq->all();
+        
         return view('pages.faq', compact('faqs'));
     }
 

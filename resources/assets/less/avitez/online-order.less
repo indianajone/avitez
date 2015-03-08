@@ -1,0 +1,62 @@
+//
+
+.orders {
+    .make-row();
+    .make-md-column(8);
+
+    .heading {
+        .make-md-column(12);
+        margin-bottom: 40px;
+    }
+
+    th {
+        .text-center();
+        color: @gray-dark;
+        font-size: @font-size-base;
+        text-transform: uppercase;
+        small {
+            display: block;
+            font-size: ceil((@font-size-base * .8)); // 10
+        }
+    }
+}
+
+.orders .products {
+    .product {
+        .make-md-column(4);
+        h3 {
+            &:extend(.text-center);
+        }
+        a {
+            .clearfix();
+        }
+        p {
+            &:extend(.text-center);
+            color: @gray-light;
+            span {
+                display: block;
+                font-size: @font-size-h4;
+            }
+        }
+    }
+    .frm-quantity {
+        .make-md-column(8);
+        margin: 60px auto;
+    }
+}
+
+.orders .frm-shipping {
+    @media (min-width: @screen-md-min) {
+        .make-row();
+    }
+}
+
+.orders .payments {
+    label {
+        &:extend(.text-green);
+        font-size: @font-size-h4;
+    }
+    .btn {
+        margin-top: 40px;
+    }
+}

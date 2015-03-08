@@ -225,12 +225,14 @@ th {
   }
   p,
   h2,
-  h3 {
+  h3,
+  .thanks .tagline {
     orphans: 3;
     widows: 3;
   }
   h2,
-  h3 {
+  h3,
+  .thanks .tagline {
     page-break-after: avoid;
   }
   select {
@@ -984,6 +986,7 @@ h6,
 .h4,
 .h5,
 .h6,
+.thanks .tagline,
 .xlarge {
   font-family: "Albert Thin", "Albert", Helvetica, Arial, sans-serif;
   font-weight: 500;
@@ -1024,6 +1027,7 @@ h2,
 .h2,
 h3,
 .h3,
+.thanks .tagline,
 .xlarge {
   margin-top: 18px;
   margin-bottom: 9px;
@@ -1071,7 +1075,8 @@ h1,
   font-size: 33px;
 }
 h2,
-.h2 {
+.h2,
+.thanks .tagline {
   font-size: 27px;
 }
 h3,
@@ -1123,6 +1128,8 @@ mark,
   text-align: right;
 }
 .text-center,
+.orders .products .product h3,
+.orders .products .product p,
 .environments .caption,
 .footer .copyright {
   text-align: center;
@@ -5987,6 +5994,8 @@ button.close {
 .panel-body:after,
 .modal-footer:before,
 .modal-footer:after,
+.orders:before,
+.orders:after,
 .environments:before,
 .environments:after,
 .giving-back:before,
@@ -6013,6 +6022,7 @@ button.close {
 .pager:after,
 .panel-body:after,
 .modal-footer:after,
+.orders:after,
 .environments:after,
 .giving-back:after,
 .thumbnails:after,
@@ -6345,6 +6355,109 @@ body {
     width: 45px;
   }
 }
+.orders {
+  margin-left: -15px;
+  margin-right: -15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .orders {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+.orders .heading {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 40px;
+}
+@media (min-width: 992px) {
+  .orders .heading {
+    float: left;
+    width: 100%;
+  }
+}
+.orders th {
+  text-align: center;
+  color: #333333;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.orders th small {
+  display: block;
+  font-size: 11px;
+}
+.orders .products .product {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .orders .products .product {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.orders .products .product a:before,
+.orders .products .product a:after {
+  content: " ";
+  display: table;
+}
+.orders .products .product a:after {
+  clear: both;
+}
+.orders .products .product a:before,
+.orders .products .product a:after {
+  content: " ";
+  display: table;
+}
+.orders .products .product a:after {
+  clear: both;
+}
+.orders .products .product p {
+  color: #777777;
+}
+.orders .products .product p span {
+  display: block;
+  font-size: 17px;
+}
+.orders .products .frm-quantity {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 60px auto;
+}
+@media (min-width: 992px) {
+  .orders .products .frm-quantity {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+@media (min-width: 992px) {
+  .orders .frm-shipping {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+.orders .payments label {
+  font-size: 17px;
+}
+.orders .payments .btn {
+  margin-top: 40px;
+}
+.thanks .tagline {
+  margin-bottom: 20px;
+}
+.thanks .tagline span {
+  top: -1px;
+}
 h1 small,
 .h1 small,
 .xlarge small {
@@ -6417,6 +6530,33 @@ label,
   max-width: 100%;
   height: auto;
 }
+.our-bottle,
+.our-bottle-2 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .our-bottle,
+  .our-bottle-2 {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.our-bottle p,
+.our-bottle-2 p {
+  color: #999;
+  font-family: "Albert", Helvetica, Arial, sans-serif;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.our-bottle p span,
+.our-bottle-2 p span {
+  font-family: "Albert Thin", "Albert", Helvetica, Arial, sans-serif;
+  display: block;
+}
 .logo-s {
   background-image: url(../images/logo-s.png);
   display: inline-block;
@@ -6465,7 +6605,8 @@ label,
 .panel-plain > .panel-heading {
   border-bottom: 1px dotted #777777;
 }
-.text-green {
+.text-green,
+.orders .payments label {
   color: #00929e;
 }
 .environments {

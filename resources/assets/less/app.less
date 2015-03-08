@@ -16,14 +16,18 @@
 @navbar-inverse-bg: @gray-dark;
 
 @font-family-sans-serif: "Albert", Helvetica, Arial, sans-serif;
+@font-family-sans-serif-bold: "Albert Bold", @font-family-sans-serif;
+@font-family-sans-serif-thin: "Albert Thin", @font-family-sans-serif;
 @font-size-base:   13px;
 @font-size-xlarge: ceil((@font-size-base * 3.57)); // ~50
 
 @headings-color: @primary-color;
-@headings-font-family: "Albert Thin", @font-family-sans-serif;
+@headings-font-family: @font-family-sans-serif-thin;
 
 @import "avitez/sticky-footer";
 @import "avitez/nav-social";
+@import "avitez/online-order";
+@import "avitez/thanks";
 
 h1, .h1,
 .xlarge {
@@ -75,6 +79,22 @@ body, label, .checkbox label {
     }
 }
 
+.our-bottle,
+.our-bottle-2 {
+    .make-md-column(4);
+    p {
+        color: #999;
+        font-family: @font-family-sans-serif;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        span {
+            font-family: @font-family-sans-serif-thin;
+            display: block;
+        }
+    }
+}
+
 .logo-s {
     background-image: url(../images/logo-s.png);
     display: inline-block;
@@ -87,7 +107,7 @@ body, label, .checkbox label {
 
 .fuel-tank {
     &:extend(.visible-md-block, .visible-lg-block);
-    font-family: "Albert Bold", @font-family-sans-serif;
+    font-family: @font-family-sans-serif-bold;
     position: absolute;
     width: 75px;
     top: 50%;
@@ -117,7 +137,7 @@ body, label, .checkbox label {
     &:extend(.text-uppercase);
     border: none;
     border-radius: 0;
-    font-family: "Albert Bold", @font-family-sans-serif;
+    font-family: @font-family-sans-serif-bold;
 }
 
 .dotted-line-right {

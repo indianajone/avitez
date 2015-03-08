@@ -1,6 +1,7 @@
 <?php namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Mustache\Billing\Factory;
 
 class AppServiceProvider extends ServiceProvider {
 
@@ -11,7 +12,10 @@ class AppServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		//
+		$this->app['validator']->extend('minimum_order', function($attribute, $value, $parameters) 
+		{
+			return (int) $value >= 4;
+		});
 	}
 
 	/**
@@ -29,6 +33,11 @@ class AppServiceProvider extends ServiceProvider {
 			'Illuminate\Contracts\Auth\Registrar',
 			'App\Services\Registrar'
 		);
+
+		$this->app->bind('Mustache\Billing\Factory', function($app)
+		{
+			return new Factory($app['config']->get('services.billing'));	
+		});
 	}
 
 }

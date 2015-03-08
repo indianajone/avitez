@@ -34,4 +34,18 @@ return [
 		'secret' => '',
 	],
 
+	'billing' => [
+		'paypal' => [
+			'client_id' => env('PAYPAL_CLIENT_ID', null),
+			'secret' => env('PAYPAL_SECRET', null),
+			'settings' => [
+                    'mode' => 'sandbox',
+                    'log' => [
+                        'enabled' => true,
+                        'path' => storage_path().'/logs/Paypal.log',
+                        'level' => 'DEBUG'
+                    ]
+                ]
+		]
+	]
 ];

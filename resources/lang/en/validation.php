@@ -73,7 +73,7 @@ return [
 	"unique"               => "The :attribute has already been taken.",
 	"url"                  => "The :attribute format is invalid.",
 	"timezone"             => "The :attribute must be a valid zone.",
-
+	"minimum_order"		   => "Minimum order is 4 cartons.",
 	/*
 	|--------------------------------------------------------------------------
 	| Custom Validation Language Lines
