@@ -66,13 +66,21 @@ class PaymentsController extends Controller {
         $this->session->flush();
 
         // send email to both client and store.
-        /*$mailer->send('emails.order', $order, function($message) use ($order)
+        $mailer->send('emails.order', ['order' => $order], function($message) use ($order)
         {
             $message->from($order['payer']['email'], $order['payer']['firstname']);
 
             $message->to('accounts@avitez.com')->subject('New Order');
 
-        });*/
+        });
+
+        $mailer->send('emails.thanks', compact('order'), function($message) use ($order)
+        {
+            $message->from('accounts@avitez.com', $order['payer']['firstname']);
+
+            $message->to($order['payer']['email'])->subject('New Order');
+
+        });
         
         return view('orders.steps.thankyou');
     }
