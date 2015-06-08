@@ -34,6 +34,22 @@ class AppServiceProvider extends ServiceProvider {
 			'App\Services\Registrar'
 		);
 
+		$this->bindPublicPath();
+
+		$this->bindBilling();
+	}
+
+	private function bindPublicPath()
+	{
+		$this->app->bind('path.public', function() {
+
+			return base_path(env('PUBLIC_PATH', 'public'));
+
+		});
+	}
+
+	private function bindBilling()
+	{
 		$this->app->bind('Mustache\Billing\Factory', function($app)
 		{
 			return new Factory($app['config']->get('services.billing'));	
