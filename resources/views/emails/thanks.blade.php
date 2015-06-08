@@ -23,7 +23,7 @@
                 <p>{{ $order['notice'] }}</p>
             @endif
             
-            @if($order['payment_method'])
+            @if($order['payment_method'] == 'transfer')
                 @include('orders.partials.payment_details')
             @endif
         </div>
