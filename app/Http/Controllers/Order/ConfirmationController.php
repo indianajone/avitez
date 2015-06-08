@@ -24,9 +24,9 @@ class ConfirmationController extends Controller {
             return redirect()->route('order_path');
         }
 
-        $price = new Price($this->session->pull('order.quantity'));
+        $price = new Price($quantity = $this->session->get('order.quantity'));
 
-        $this->session->put('order.description', '500ml (24 per pack) One-time delivery');
+        $this->session->put('order.description', "500ml (24 per pack) x $quantity One-time delivery");
 
         $this->session->put('order.total', $price->total());
 

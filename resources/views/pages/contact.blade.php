@@ -41,13 +41,14 @@
         <div class="col-md-4">
             <address>
                 <strong class="text-green">Address</strong><br>
-                146/35 ITF Tower, 17 floor,<br>
-                Silom Road, Silom, Bangkok<br>
-                10500<br>
+                Avitez Ltd<br>
+                20/12 Sukhumvit 49/13 (Promsri),<br>
+                Klongton Nua, Wattana, Bangkok<br>
+                10110<br>
             </address>
             <address>
                 <strong class="text-green">Head Office</strong><br>
-                +66(0)2 663 7755
+                +66(0)2 185 3321
             </address>
             <address>
                 <strong class="text-green">Sales &amp; Marketing</strong><br>
@@ -55,7 +56,7 @@
             </address>
             <address>
                 <strong class="text-green">Operations</strong><br>
-                +66(0)2 663 7799
+                +66(0)2 185 3321
             </address>
             <address>
                 <strong class="text-green">Email us at:</strong><br>

@@ -46,7 +46,7 @@ class PaymentsController extends Controller {
         // Get order value object from session "order"
         $order = $this->session->get('order');
 
-        // precess to payment method.
+        // process to payment method.
         $url = $this->billing->driver($request->payments)->make($order);
         
         return redirect()->away($url);
@@ -63,22 +63,24 @@ class PaymentsController extends Controller {
 
         $order = $this->session->pull('order');
 
+        $order['payment_method'] = $this->session->pull('driver');
+
         $this->session->flush();
 
         // send email to both client and store.
-        $mailer->send('emails.order', ['order' => $order], function($message) use ($order)
+        $mailer->send('emails.order', compact('order'), function($message) use ($order)
         {
             $message->from($order['payer']['email'], $order['payer']['firstname']);
 
-            $message->to('accounts@avitez.com')->subject('New Order');
+            $message->to('accounts@avitez.co.th')->subject('New Order');
 
         });
 
         $mailer->send('emails.thanks', compact('order'), function($message) use ($order)
         {
-            $message->from('accounts@avitez.com', $order['payer']['firstname']);
+            $message->from('accounts@avitez.co.th', 'Avitez ltd');
 
-            $message->to($order['payer']['email'])->subject('New Order');
+            $message->to($order['payer']['email'])->subject('Thanks you');
 
         });
         
