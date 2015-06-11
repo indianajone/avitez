@@ -39,11 +39,11 @@ return [
 			'client_id' => env('PAYPAL_CLIENT_ID', null),
 			'secret' => env('PAYPAL_SECRET', null),
 			'settings' => [
-                    'mode' => 'sandbox',
+                    'mode' => env('PAYPAL_MODE', 'sandbox'),
                     'log' => [
                         'enabled' => true,
                         'path' => storage_path().'/logs/Paypal.log',
-                        'level' => 'DEBUG'
+                        'level' => 'INFO'
                     ]
                 ]
 		]

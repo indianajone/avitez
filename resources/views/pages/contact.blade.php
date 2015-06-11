@@ -60,8 +60,8 @@
             </address>
             <address>
                 <strong class="text-green">Email us at:</strong><br>
-                <a href="mailto:#">info@avitez.com</a>,
-                <a href="mailto:#">order@avitez.com</a>
+                <a href="mailto:info@avitez.com">info@avitez.com</a>,
+                <a href="mailto:orders@avitez.com">orders@avitez.com</a>
             </address>
         </div>       
     </div>

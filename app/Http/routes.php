@@ -125,7 +125,7 @@ Route::post('contact', function()
     {
         $message->from($input['email'], $input['name']);
 
-        $message->to('accounts@avitez.com')->subject('Enquiry from website');
+        $message->to('info@avitez.com')->subject('Enquiry from website');
 
     });
 
