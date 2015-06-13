@@ -44,7 +44,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<h5><i class="logo-s"></i>Avitez and Centara Hotels &amp; Resorts are giving back... {!! link_to_route('contact_path', 'read more') !!}</h5>
+				<h5><i class="logo-s"></i>Avitez and Centara Hotels &amp; Resorts are giving back... {!! link_to_route('env_path', 'read more') !!}</h5>
 			</div>
 		</div>
 	</div>

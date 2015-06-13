@@ -47,11 +47,11 @@
 		<div class="container">
     		<div class="collapse navbar-collapse" id="main-nav">
     			<ul class="nav navbar-nav main-nav">
-    				<li>{!! link_to_route('home', 'Home') !!}</li>
-    				<li>{!! link_to_route('bottles_path', 'Our Bottles') !!}</li>
-    				<li>{!! link_to_route('water_path', 'Our Water') !!}</li>
-    				<li>{!! link_to_route('env_path', 'Our Environment') !!}</li>
-    				<li>{!! link_to_route('order_path', 'Online Ordering') !!}</li>
+    				<li{{ Route::currentRouteName() == "home" ? ' class=active' : '' }}>{!! link_to_route('home', 'Home') !!}</li>
+    				<li{{ Route::currentRouteName() == "bottles_path" ? ' class=active' : '' }}>{!! link_to_route('bottles_path', 'Our Bottles') !!}</li>
+    				<li{{ Route::currentRouteName() == "water_path" ? ' class=active' : '' }}>{!! link_to_route('water_path', 'Our Water') !!}</li>
+    				<li{{ Route::currentRouteName() == "env_path" ? ' class=active' : '' }}>{!! link_to_route('env_path', 'Our Environment') !!}</li>
+    				<li{{ Route::currentRouteName() == "order_path" ? ' class=active' : '' }}>{!! link_to_route('order_path', 'Online Ordering') !!}</li>
     			</ul>
     		</div>
 		</div>

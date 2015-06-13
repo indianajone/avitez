@@ -129,5 +129,5 @@ Route::post('contact', function()
 
     });
 
-    return Redirect::route('contact_path')->withMessage('Thank you.');
+    return Redirect::route('contact_path')->withMessage('Thank you for your enquiry. We will respond within 24 hours.');
 });

@@ -72,13 +72,13 @@ class PaymentsController extends Controller {
         {
             $message->from($order['payer']['email'], $order['payer']['firstname']);
 
-            $message->to('accounts@avitez.co.th')->subject('New Order');
+            $message->to('orders@avitez.co.th')->subject('New Order');
 
         });
 
         $mailer->send('emails.thanks', compact('order'), function($message) use ($order)
         {
-            $message->from('accounts@avitez.co.th', 'Avitez ltd');
+            $message->from('orders@avitez.co.th', 'Avitez ltd');
 
             $message->to($order['payer']['email'])->subject('Thanks you');
 
