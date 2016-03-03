@@ -54,7 +54,7 @@ return [
 	|
 	*/
 
-	'from' => ['address' => 'accounts@avitez.com', 'name' => 'Avitez Limited'],
+	'from' => ['address' => 'info@avitez.com', 'name' => 'Avitez Limited'],
 
 	/*
 	|--------------------------------------------------------------------------
