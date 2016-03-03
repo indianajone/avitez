@@ -32,7 +32,7 @@
                 </p>
                 <p>
                     กรุณาส่งหลักฐานการโอนเงินมาที่
-                    <a href="mailto:accounts@avitez.com" alt="accounts@avitez.com">accounts@avitez.com</a>
+                    <a href="mailto:account@avitez.com" alt="account@avitez.com">account@avitez.com</a>
                 </p>
             @endif
 
