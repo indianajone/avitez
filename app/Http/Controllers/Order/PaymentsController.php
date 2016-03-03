@@ -80,7 +80,7 @@ class PaymentsController extends Controller {
         {
             $message->from('orders@avitez.co.th', 'Avitez ltd');
 
-            $message->to($order['payer']['email'])->subject('Thanks you');
+            $message->to($order['payer']['email'])->subject('Thank you');
 
         });
         
